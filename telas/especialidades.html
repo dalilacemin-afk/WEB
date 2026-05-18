@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/estilo.css" rel="stylesheet">
+    <link href="../css/estilo_especialidades.css" rel="stylesheet">
+    <link href="../img/OIP.jpg" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>ODONTO CACHOEIRINHA</title>
+
+    <script>
+        alert("Conheça nossas Especialidades!");
+
+        function abrirDetalhes(nome, imagem, descricao) {
+            const url = `pop_especialidades.html?nomeProduto=${encodeURIComponent(nome)}&imgProduto=${encodeURIComponent(imagem)}&descProduto=${encodeURIComponent(descricao)}`;
+            window.open(url, "_blank", "width=800,height=700");
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="divHeader">
+            <img src="../img/imagem1.png" class="logo" alt="Logo Odonto Cachoeirinha">
+
+            <!-- Barra de navegação -->
+            <nav>
+                <!-- Lista de itens do menu -->
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>Especialidades</li>
+                    <li>Contato</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo da Página Especialidades -->
+    <main>
+        <ul class="especialidades-titulo">
+            <li>Especialidades</li>
+        </ul>
+
+        <!-- EXIBE A DATA -->
+        <p class="data">
+            <script>
+                const dia = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+                const mes = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+                const data = new Date();
+                document.write(
+                    dia[data.getDay()] + ", " +
+                    data.getDate() + " de " +
+                    mes[data.getMonth()] + " de " +
+                    data.getFullYear()
+                );
+            </script>
+        </p>
+
+        <!-- Exibição das Especialidades -->
+        <div class="container">
+            <script>
+                const desc_especialidade = "Conheça Nossas Especialidades:";
+            </script>
+
+            <div class="card">
+                <img src="../img/especialidades/invisalign.jpg" alt="Ortodontia">
+                <h2>Ortodontia</h2>
+                <p>Invisalign, Ortopedia</p>
+                <p class="preco">Sob Consulta</p>
+            </div>
+
+            <div class="card">
+                <img src="../img/especialidades/cirurgia.jpg" alt="Cirurgia Oral Menor">
+                <h2>Cirurgia Oral Menor</h2>
+                <p>Siso, Tracionamento de Caninos</p>
+                <p class="preco">Sob Consulta</p>
+            </div>
+
+            <div class="card">
+                <img src="../img/especialidades/facetas.png" alt="Estética Dental">
+                <h2>Estética Dental</h2>
+                <p>Facetas</p>
+                <p class="preco">Sob Consulta</p>
+            </div>
+
+            <div class="card">
+                <img src="../img/especialidades/implante.png" alt="Implantes Dentários">
+                <h2>Implantes Dentários</h2>
+                <p>Carga Imediata</p>
+                <p class="preco">Sob Consulta</p>
+            </div>
+
+            <div class="card">
+                <img src="../img/especialidades/geral.png" alt="Clínica Geral">
+                <h2>Clínica Geral</h2>
+                <p>Restaurações</p>
+                <p class="preco">Sob Consulta</p>
+            </div>
+
+            <div class="card">
+                <img src="../img/especialidades/pediatria.png" alt="Odontopediatria">
+                <h2>Odontopediatria</h2>
+                <p>Crianças de 0-12 anos</p>
+                <p class="preco">Sob Consulta</p>
+            </div>
+
+            <div class="card">
+                <img src="../img/especialidades/endo.png" alt="Endodontia com Microscópio">
+                <h2>Endodontia com Microscópio</h2>
+                <p>Molares, Cirurgia Paraendodôntica</p>
+                <p class="preco">Sob Consulta</p>
+            </div>
+
+            <div class="card">
+                <img src="../img/especialidades/protese.png" alt="Próteses Dentárias">
+                <h2>Próteses Dentárias</h2>
+                <p>Prótese Total, Prótese Parcial Removível</p>
+                <p class="preco">Sob Consulta</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <img src="../img/imagem1.png" class="logo_footer" alt="Logo Odonto Cachoeirinha">
+
+        <p>
+            Nosso Contato:
+            <a href="https://wa.me/5511940252074" target="_blank">
+                <i class="fa fa-whatsapp"></i> (11) 9.4025-2074
+            </a>
+
+            <a href="https://instagram.com/odontocachoeirinha_" target="_blank">
+                <i class="fa fa-instagram"></i> @odontocachoeirinha2
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
