@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Odonto Cachoeirinha</title>
+        <link href="css/estilo_especialidades.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div>
+                <h1 id="nome-produto"></h1>
+                <img id="img-produto" src=""/>
+                <p id="desc-produto"></p>
+
+                <!--Captura as informações do parâmetro-->
+                <script>
+                    //Função para capturar os parâmetros da POP
+                    function getParametro(infoCapturar){
+                        urlParametro=new URLSearchParams(window.location.search);
+                        
+                        return urlParametro.get(infoCapturar);
+                    }
+                    //Preenche as informações no layout
+                    document.getElementById("nome-produto").textContent = getParametro("nomeProduto");
+                    document.getElementById("img-produto").src = getParametro("imgProduto");
+                    document.getElementById("desc-produto").textContent = getParametro("descProduto");
+                </script>
+            </div>
+        </main>
+    </body>
+</html>
