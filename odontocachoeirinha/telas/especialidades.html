@@ -1,39 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link href="../css/estilo.css" rel="stylesheet">
-    <link href="../css/estilo_especialidades.css" rel="stylesheet">
-    <link href="../img/OIP.jpg" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <title>ODONTO CACHOEIRINHA</title>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../css/estilo.css" rel="stylesheet">
+        <link href="../css/estilo_especialidades.css" rel="stylesheet">
+        <link href="../img/OIP.jpg" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <title>ODONTO CACHOEIRINHA</title>
 
-    <script>
-        alert("Conheça nossas Especialidades!");
+        <script>
+            alert("Conheça nossas Especialidades!");
+            function abrirDetalhes(nome,imagem,descricao) {
+                url = `pop_especialidades.html?titulo-especialidades=${encodeURIComponent(nome)}&img-especialidades=${encodeURIComponent(imagem)}&descricao=${encodeURIComponent(descricao)}`;
+                window.open(url, "_blank", "width=800,height=750");
+            }
+        </script>
+    </head>
 
-        function abrirDetalhes(nome, imagem, descricao) {
-            const url = `pop_especialidades.html?nomeProduto=${encodeURIComponent(nome)}&imgProduto=${encodeURIComponent(imagem)}&descProduto=${encodeURIComponent(descricao)}`;
-            window.open(url, "_blank", "width=800,height=700");
-        }
-    </script>
-</head>
-
-<body>
-    <header>
-        <div class="divHeader">
-            <img src="../img/imagem1.png" class="logo" alt="Logo Odonto Cachoeirinha">
+    <body>
+        <header>
+            <div class="divHeader">
+                <img src="../img/imagem1.png" class="logo" alt="Logo Odonto Cachoeirinha">
 
             <!-- Barra de navegação -->
-            <nav>
+                <nav>
                 <!-- Lista de itens do menu -->
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li>Especialidades</li>
-                    <li>Contato</li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li>Especialidades</li>
+                        <li>Contato</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
     <!-- Conteúdo da Página Especialidades -->
     <main>
@@ -54,15 +52,16 @@
                     mes[data.getMonth()] + " de " +
                     data.getFullYear()
                 );
-            </script>
+            </script>- 
+
         </p>
 
         <!-- Exibição das Especialidades -->
         <div class="container">
             <script>
-                const desc_especialidade = "Conheça Nossas Especialidades:";
+                desc_especialidades = "Conheça Nossas Especialidades:";
+                slider = ['../img/especialidades/acessorios.png','../img/especialidades/escovadente.png']
             </script>
-
             <div class="card">
                 <img src="../img/especialidades/invisalign.jpg" alt="Ortodontia">
                 <h2>Ortodontia</h2>
@@ -118,8 +117,24 @@
                 <p>Prótese Total, Prótese Parcial Removível</p>
                 <p class="preco">Sob Consulta</p>
             </div>
+
+            <div class="card">
+                <script>
+                    desc_produto="Acessórios odontológicos: Escova Dental, Fio Dental, Enxaguante Bucal, Pasta de Dente";
+                    slider=['../img/especialidades/pastadedente.jpeg','../img/especialidades/escovadente.png','../img/especialidades/enxaguantebucal.png'];
+                </script>
+                <div class="card" onclick="abrirDetalhes('Acessórios', '../img/especialidades/acessorios.png','acessórios odontológicos' )">
+                    <img src="../img/especialidades/acessorios.png" class="img-especialidades">
+                    <h2 class="titulo-especialidades">Acessórios odontológicos</h2>
+                <p class="descricao">Escova Dental, Fio Dental, Enxaguante Bucal, Pasta de Dente</p>
+                <p class="preco">A partir de R$ 40/cada</p>
+            </div>
         </div>
+
+        
+            
     </main>
+    
 
     <!-- Rodapé da página -->
     <footer>

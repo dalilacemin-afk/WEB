@@ -1,3 +1,18 @@
+body{
+
+    margin: 0;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.image-pop{
+    width: 790;
+    height: 600;
+}
+
+.desc-pop{
+    width: 100%;
+}
 /*Título*/
 .especialidades-titulo {
     font-size: 40px;
@@ -56,4 +71,46 @@ main{
     font-size: 24px;
     margin-right: 20px;
     color: navy;
+}
+
+.pop{
+    margin: 0;
+
+}
+
+.pop img{
+    width: 650;
+    height: 450;
+    border-radius: 10px;
+}
+
+.pop h1{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color:rgb(8, 41, 112);
+}
+
+.pop p{
+    padding: 2% 09% 7%;
+    margin: 0;
+    white-space: pre-line;
+}
+
+.slider{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.slider button{
+    background-color: purple;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
 }
